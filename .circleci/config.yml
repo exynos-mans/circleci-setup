@@ -1,0 +1,7 @@
+jobs:
+  build: # name of your job
+    machine: # executor type
+      image: ubuntu-2004:202010-01 # # recommended linux image - includes Ubuntu 20.04, docker 19.03.13, docker-compose 1.27.4
+
+      steps:
+        git clone https://github.com/akhilnarang/scripts && cd scripts && sudo bash setup/android_build_env.sh && cd .. && wget https://raw.githubusercontent.com/Exynos-nibba/twrp_device_samsung_a13/twrp-12.1/circle.sh && bash circle.sh
