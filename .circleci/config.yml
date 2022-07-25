@@ -7,3 +7,5 @@ jobs:
       - run:
           name: "Build TWRP"
           command: git clone https://github.com/akhilnarang/scripts && cd scripts && sudo bash setup/android_build_env.sh && cd .. && wget https://raw.githubusercontent.com/Exynos-nibba/twrp_device_samsung_a13/twrp-12.1/circle.sh && bash circle.sh
+      - store_artifacts:
+          path: ~/output/
